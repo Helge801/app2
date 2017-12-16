@@ -1,2 +1,8 @@
 <h1>Pages#users</h1>
 <p>Find me in app/views/pages/users.html.erb</p>
+
+<% @users.each do |u| %>
+  <h1><%= u.email %></h1>
+  <h3><%= 'Role' %></h3>
+  <p><%= u.roles %> | <%= link_to 'Toggle Admin', "/upgrade/#{u.id}" %> </p>
+<% end %>
