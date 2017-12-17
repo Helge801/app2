@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  
+  access all: [:home, :about, :contact], user: {except: [:users, :destroy]}, admin: :all
   
   def home
   end
